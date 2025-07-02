@@ -1,23 +1,300 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Empower Over 50 Toolkit</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empower Over 50 - Life Tools for Your Next Chapter</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background-color: #fafafa;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #34495e 0%, #2c3e50 100%);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 400;
+            margin-bottom: 20px;
+            letter-spacing: -0.02em;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            font-weight: 300;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        main {
+            padding: 80px 0;
+        }
+        
+        .intro {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .intro h2 {
+            font-size: 1.8rem;
+            color: #34495e;
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+        
+        .intro p {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+            color: #5a6c7d;
+            line-height: 1.7;
+        }
+        
+        .tools-section {
+            margin-bottom: 80px;
+        }
+        
+        .section-title {
+            font-size: 1.6rem;
+            text-align: center;
+            margin-bottom: 40px;
+            color: #34495e;
+            font-weight: 400;
+        }
+        
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+        
+        .tool-card {
+            background: white;
+            border: 1px solid #e1e8ed;
+            border-radius: 8px;
+            padding: 25px;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        
+        .tool-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            border-color: #3498db;
+        }
+        
+        .tool-card h3 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+        
+        .tool-card a {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 15px;
+            transition: color 0.3s ease;
+        }
+        
+        .tool-card a:hover {
+            color: #2980b9;
+        }
+        
+        .tool-card a::after {
+            content: "→";
+            transition: transform 0.3s ease;
+        }
+        
+        .tool-card a:hover::after {
+            transform: translateX(3px);
+        }
+        
+        .tool-description {
+            color: #5a6c7d;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+        
+        .coming-soon {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-radius: 12px;
+            padding: 40px;
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .coming-soon h3 {
+            color: #34495e;
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+            font-weight: 400;
+        }
+        
+        .coming-soon p {
+            color: #6c757d;
+            font-size: 1rem;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        
+        footer {
+            background: #34495e;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        footer p {
+            opacity: 0.8;
+            font-size: 0.9rem;
+        }
+        
+        footer a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        
+        footer a:hover {
+            color: #5dade2;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .tools-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            header {
+                padding: 40px 0;
+            }
+            
+            main {
+                padding: 60px 0;
+            }
+            
+            .tool-card {
+                padding: 20px;
+            }
+        }
+    </style>
 </head>
-<body style="font-family: sans-serif; max-width: 600px; margin: 2rem auto; padding: 1rem;">
-  <h1>Empower Over 50 Toolkit</h1>
-  <p>A curated set of tools to help you navigate life, work, and purpose beyond 50.</p>
-  <ul>
-    <li><a href="https://farnonmaxwell.github.io/confidence-tracker/">Confidence Tracker</a></li>
-    <li><a href="https://farnonmaxwell.github.io/retirement-budget-planner/">Budget Planner</a></li>
-    <li><a href="https://farnonmaxwell.github.io/reinvention-timeline/">Reinvention Timeline</a></li>
-    <li><a href="https://farnonmaxwell.github.io/purpose-checkin/">Purpose Check-In</a></li>
-    <li><a href="https://farnonmaxwell.github.io/daily-focus/">Daily Focus Tool</a></li>
-    <li><a href="https://farnonmaxwell.github.io/career-shift-scorecard/">Career Shift Scorecard</a></li>
-    <li><a href="https://farnonmaxwell.github.io/what-matters-now/">What Matters Now</a></li>
-    <li><a href="https://farnonmaxwell.github.io/mindset-reset/">Mindset Reset</a></li>
-  </ul>
-  <p>More tools and videos coming soon at <strong>Empower Over 50</strong>.</p>
+<body>
+    <nav style="text-align: right; padding: 1rem;">
+        <a href="tools.html">Explore the Toolkit</a>
+    </nav>
+
+    <header>
+        <div class="container">
+            <h1>Empower Over 50</h1>
+            <p class="subtitle">Practical tools and guidance for your next chapter of growth, purpose, and financial clarity</p>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="intro">
+                <h2>Your Toolkit for Reinvention</h2>
+                <p>Whether you're planning a career transition, exploring new possibilities, or seeking greater clarity about your future, these thoughtfully curated tools are designed to support your journey with practical wisdom and gentle guidance.</p>
+            </section>
+
+            <section class="tools-section">
+                <h3 class="section-title">Essential Life Tools</h3>
+                <div class="tools-grid">
+                    <div class="tool-card">
+                        <h3>Personal Development Map</h3>
+                        <p class="tool-description">A comprehensive framework to assess where you are and chart your path forward with clarity and confidence.</p>
+                        <a href="/personal-development-map">Explore Your Map</a>
+                    </div>
+                    
+                    <div class="tool-card">
+                        <h3>Career Transition Planner</h3>
+                        <p class="tool-description">Step-by-step guidance for navigating career changes, from exploration to implementation.</p>
+                        <a href="/career-transition-planner">Plan Your Transition</a>
+                    </div>
+                    
+                    <div class="tool-card">
+                        <h3>Financial Clarity Calculator</h3>
+                        <p class="tool-description">Simple tools to understand your financial position and plan for the lifestyle you want.</p>
+                        <a href="/financial-clarity-calculator">Get Financial Clarity</a>
+                    </div>
+                    
+                    <div class="tool-card">
+                        <h3>Purpose Discovery Guide</h3>
+                        <p class="tool-description">Thoughtful exercises to reconnect with your values and discover meaningful next steps.</p>
+                        <a href="/purpose-discovery-guide">Discover Your Purpose</a>
+                    </div>
+                    
+                    <div class="tool-card">
+                        <h3>Skills Assessment Toolkit</h3>
+                        <p class="tool-description">Identify your transferable skills and discover new areas for growth and opportunity.</p>
+                        <a href="/skills-assessment-toolkit">Assess Your Skills</a>
+                    </div>
+                    
+                    <div class="tool-card">
+                        <h3>Retirement Readiness Checker</h3>
+                        <p class="tool-description">Evaluate your retirement preparedness and explore different timeline scenarios.</p>
+                        <a href="/retirement-readiness-checker">Check Your Readiness</a>
+                    </div>
+                    
+                    <div class="tool-card">
+                        <h3>Health & Wellness Tracker</h3>
+                        <p class="tool-description">Monitor your physical and mental well-being as you navigate life transitions.</p>
+                        <a href="/health-wellness-tracker">Track Your Wellness</a>
+                    </div>
+                    
+                    <div class="tool-card">
+                        <h3>Goal Setting Framework</h3>
+                        <p class="tool-description">A structured approach to setting and achieving meaningful goals for this stage of life.</p>
+                        <a href="/goal-setting-framework">Set Your Goals</a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="coming-soon">
+                <h3>More Resources Coming Soon</h3>
+                <p>We're developing video guidance, community resources, and additional tools to support your journey. Stay tuned for updates as we continue building this comprehensive resource for empowered living after 50.</p>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Empower Over 50. Created with care for your next chapter.</p>
+            <p style="margin-top: 10px;">Questions? <a href="mailto:contact@empowerover50.com">Get in touch</a></p>
+        </div>
+    </footer>
 </body>
 </html>
